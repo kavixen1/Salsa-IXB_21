@@ -4,30 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tugas List</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8fafc;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background-color: #72d0f3;
+            padding: 0;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar a {
+            display: block;
+            padding: 15px 25px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            background-color: #42b5df;
+        }
+
+        .navbar a.active {
+            background-color: #3aaed8;
+        }
+
+        /* ISI HALAMAN */
+        .wadah-utama {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0284c7;
+            margin-bottom: 10px;
+        }
+
+        .deskripsi {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        /* DUA KOLOM */
+        .daftar-sejajar {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .kolom-list {
+            width: 45%;
+            padding: 20px;
+            border: 2px solid #bae6fd;
+            border-radius: 10px;
+            background-color: #f0f9ff;
+        }
+
+        .kolom-list h3 {
+            text-align: center;
+            color: #0284c7;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        /* MEMBUAT LIST VERTIKAL */
+        .kolom-list ol,
+        .kolom-list ul {
+            display: block;
+            margin: 0;
+            padding-left: 30px;
+        }
+
+        .kolom-list li {
+            display: list-item;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        /* RESPONSIVE UNTUK HP */
+        @media (max-width: 700px) {
+
+            .navbar ul {
+                flex-direction: column;
+            }
+
+            .navbar a {
+                text-align: center;
+            }
+
+            .daftar-sejajar {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .kolom-list {
+                width: 100%;
+            }
+
+            .wadah-utama {
+                margin: 20px;
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
+    <!-- NAVBAR -->
     <nav class="navbar">
         <ul>
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="biodata.html">Tugas Biodata</a></li>
-            <li><a href="list.html" class="active">Tugas List</a></li>
-            <li><a href="table.html">Tugas Table</a></li>
+            <li>
+                <a href="index.html">Beranda</a>
+            </li>
+
+            <li>
+                <a href="biodata.html">Tugas Biodata</a>
+            </li>
+
+            <li>
+                <a href="list.html" class="active">Tugas List</a>
+            </li>
+
+            <li>
+                <a href="table.html">Tugas Table</a>
+            </li>
         </ul>
     </nav>
 
+
+    <!-- ISI -->
     <div class="wadah-utama">
 
         <h1>Daftar Olahan Telur dan Minuman Es</h1>
 
-        <p>Dibuat oleh : Salsa | Kelas 9B</p>
+        <p class="deskripsi">
+            Dibuat oleh : Salsa | Kelas 9B
+        </p>
+
 
         <div class="daftar-sejajar">
 
-            <!-- Daftar Olahan Telur -->
+            <!-- OLAHAN TELUR -->
             <div class="kolom-list">
+
                 <h3>Olahan Telur</h3>
 
                 <ol>
@@ -42,10 +189,13 @@
                     <li>Telur Bumbu Kuning</li>
                     <li>Telur Crispy</li>
                 </ol>
+
             </div>
 
-            <!-- Daftar Minuman Es -->
+
+            <!-- MINUMAN ES -->
             <div class="kolom-list">
+
                 <h3>Minuman Es</h3>
 
                 <ul>
@@ -60,6 +210,7 @@
                     <li>Es Dawet</li>
                     <li>Es Susu</li>
                 </ul>
+
             </div>
 
         </div>
