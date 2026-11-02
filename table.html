@@ -1,69 +1,65 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table Responsive</title>
-
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            white-space: nowrap;
-        }
-
-        th, td {
-            padding: 10px;
-            border-bottom: 1px solid #cbd5e1;
-            text-align: left;
-        }
-
-        /* Atur warna baris genap (zebra) */
-        tr:nth-child(even) {
-            background-color: #f1f5f9;
-        }
-
-        /* Efek sorot saat mouse diarahkan */
-        tr:hover {
-            background-color: #fef08a;
-        }
-    </style>
+    <title>Salsa 9B | Tugas Tabel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="table.css">
 </head>
-
 <body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
 
-    <!-- Pembungkus responsif overflow-x auto -->
-    <div style="overflow-x: auto;">
+            <!-- Bagian Dropdown Dimulai -->
+            <li class="dropdown">
+                <a href="#">Daftar Tugas &#9662;</a>
+                <div class="dropdown-content">
+                    <a href="biodata.html">Tugas Biodata</a>
+                    <a href="list.html">Tugas List</a>
+                    <a href="table.html" class="active">Tugas Tabel</a>
+                </div>
+            </li>
+            <!-- Bagian Dropdown Selesai -->
+        </ul>
+    </nav>
 
-        <table>
-
-            <tr style="background-color: #0284c7; color: white;">
-                <th>No</th>
-                <th>Nama Lengkap Siswa</th>
-                <th>Nilai Tugas 1</th>
-                <th>Nilai Tugas 2</th>
-                <th>Status Akhir Pembelajaran</th>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>Salsa Febrina</td>
-                <td>88</td>
-                <td>92</td>
-                <td>LULUS (Tabel Sangat Luas)</td>
-            </tr>
-
-            <tr>
-                <td>2</td>
-                <td>Adam Smith</td>
-                <td>90</td>
-                <td>95</td>
-                <td>LULUS (Dapat Di-scroll di HP)</td>
-            </tr>
-
-        </table>
-
+    <div class="wadah-utama">
+        <h1>Halaman Beranda</h1>
+        <div style="overflow-x: auto;">
+            <table>
+                <tr class="th">
+                    <th>No</th>
+                    <th>Nama-nama Brand hp</th>
+                    <th>Asal</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>oppo</td>
+                    <td>China</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>vivo</td>
+                    <td>USA</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>samsung</td>
+                    <td>Korea</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>sony</td>
+                    <td>China</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>nokia</td>
+                    <td>Finland</td>
+                </tr>
+            </table>
+        </div>
     </div>
-
 </body>
 </html>
